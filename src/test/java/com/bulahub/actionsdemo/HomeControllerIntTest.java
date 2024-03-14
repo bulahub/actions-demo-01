@@ -19,8 +19,8 @@ class HomeControllerIntTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    void greetingShouldReturnDefaultMessage() throws Exception {
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-                String.class)).contains("Hello  World!");
+    void getHome() throws Exception {
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/home",
+                String.class)).contains("Hello World!");
     }
 }
